@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>XII Congreso ISC · TecNM Ajalpan</title>
+  <link rel="stylesheet" href="/css/congreso.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="container">
+      <a class="brand" href="#/">
+        <span class="brand-mark">XII</span>
+        <span class="brand-text"><strong>Congreso ISC</strong><span>TecNM · Campus Ajalpan</span></span>
+      </a>
+      <nav class="nav" id="nav"></nav>
+    </div>
+  </header>
+
+  <main class="container section" id="app"></main>
+
+  <dialog class="modal" id="confirm">
+    <form method="dialog" class="panel panel-cut stack">
+      <span class="title-plate" id="confirm-title">Confirmar</span>
+      <p id="confirm-text" style="margin:0"></p>
+      <div class="row" style="justify-content:flex-end">
+        <button class="btn btn-ghost" value="no">Cancelar</button>
+        <button class="btn btn-danger" value="yes" id="confirm-ok">Confirmar</button>
+      </div>
+    </form>
+  </dialog>
+
+  <div class="toasts" id="toasts"></div>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>

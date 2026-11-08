@@ -1,0 +1,29 @@
+@host = http://localhost:5194
+
+### Login (alumno)
+POST {{host}}/api/auth/login
+Content-Type: application/json
+
+{ "username": "ana.lopez", "password": "Alumno123" }
+
+### Talleres
+GET {{host}}/api/talleres
+
+### Talleres de la tarde
+GET {{host}}/api/talleres?horario=2
+
+### Crear taller (profesor Id 1)
+POST {{host}}/api/talleres
+Content-Type: application/json
+X-User-Id: 1
+
+{ "name": "Taller de prueba", "description": "Demo", "instructor": "Ing. Roberto Ramírez", "horario": 1, "horas": 2 }
+
+### Inscribir alumno (diego.flores = 9) al taller 1
+POST {{host}}/api/inscripciones
+Content-Type: application/json
+
+{ "userId": 9, "tallerId": 1 }
+
+### Inscripciones de un alumno
+GET {{host}}/api/users/4/inscripciones

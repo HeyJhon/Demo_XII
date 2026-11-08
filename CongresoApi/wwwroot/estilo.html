@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Guía de estilo · XII Congreso ISC</title>
+  <link rel="stylesheet" href="/css/congreso.css">
+  <style>
+    .swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 1rem; }
+    .swatch { border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--border); background: #fff; font-size: .8rem; }
+    .swatch div { height: 64px; }
+    .swatch p { margin: 0; padding: .5rem .7rem; }
+    .swatch code { color: var(--text-muted); }
+    .two-col { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
+  </style>
+</head>
+<body>
+  <header class="app-header">
+    <div class="container">
+      <a class="brand" href="/">
+        <span class="brand-mark">XII</span>
+        <span class="brand-text"><strong>Congreso ISC</strong><span>TecNM · Campus Ajalpan</span></span>
+      </a>
+      <nav class="nav">
+        <a href="#" class="active">Talleres</a>
+        <a href="#">Mis inscripciones</a>
+        <a href="#">Entrar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container section">
+    <p class="eyebrow">Guía de estilo · v1</p>
+    <h1>XII Congreso de <span class="text-gradient">Ingeniería en Sistemas</span></h1>
+    <p class="muted">Basada en los flyers de los talleres: fondo claro con retícula tech, azul marino institucional, azul eléctrico, brillo cian y acento violeta. Paneles con esquinas cortadas y títulos en itálica pesada.</p>
+
+    <hr class="divider-glow">
+
+    <!-- Paleta -->
+    <h2>Paleta</h2>
+    <div class="swatches">
+      <div class="swatch"><div style="background:var(--navy-900)"></div><p><b>Navy 900</b><br><code>#0B1640</code> · texto/header</p></div>
+      <div class="swatch"><div style="background:var(--navy-700)"></div><p><b>Navy 700</b><br><code>#16286B</code> · paneles</p></div>
+      <div class="swatch"><div style="background:var(--blue-600)"></div><p><b>Azul eléctrico</b><br><code>#1D5BFF</code> · primario</p></div>
+      <div class="swatch"><div style="background:var(--cyan-400)"></div><p><b>Cian glow</b><br><code>#22D3EE</code> · solo brillo</p></div>
+      <div class="swatch"><div style="background:var(--violet-600)"></div><p><b>Violeta</b><br><code>#7C3AED</code> · acento</p></div>
+      <div class="swatch"><div style="background:var(--gold-400)"></div><p><b>Oro</b><br><code>#FBBF24</code> · destacado</p></div>
+      <div class="swatch"><div style="background:var(--bg)"></div><p><b>Fondo</b><br><code>#EEF4FF</code></p></div>
+    </div>
+
+    <hr class="divider-glow">
+
+    <!-- Tipografía -->
+    <h2>Tipografía</h2>
+    <div class="two-col">
+      <div class="panel panel-cut stack">
+        <p class="eyebrow">Display · Exo 2 Black Italic</p>
+        <span class="title-plate" style="font-size:1.6rem">Taller</span>
+        <p class="display" style="margin:0">Impresión <span class="text-gradient">3D</span></p>
+        <h3>Subtítulo · Exo 2 ExtraBold</h3>
+      </div>
+      <div class="panel panel-cut stack">
+        <p class="eyebrow">Texto · Inter</p>
+        <p style="margin:0">Texto de lectura en Inter 400. Ideal para descripciones de talleres, formularios y mensajes. <b>Negritas en 700</b>.</p>
+        <p class="muted" style="margin:0">Texto secundario en gris azulado para metadatos.</p>
+      </div>
+    </div>
+
+    <hr class="divider-glow">
+
+    <!-- Componentes -->
+    <h2>Componentes</h2>
+    <div class="two-col">
+      <div class="panel stack">
+        <p class="eyebrow">Botones</p>
+        <div class="row">
+          <button class="btn btn-primary">Inscribirme</button>
+          <button class="btn">Ver taller</button>
+          <button class="btn btn-dark">Nuevo taller</button>
+        </div>
+        <div class="row">
+          <button class="btn btn-gold">Destacado</button>
+          <button class="btn btn-ghost">Cancelar</button>
+          <button class="btn btn-danger btn-sm">Darme de baja</button>
+          <button class="btn btn-sm" disabled>Inscrito</button>
+        </div>
+        <p class="eyebrow">Chips</p>
+        <div class="row">
+          <span class="chip chip-manana">☀ Mañana</span>
+          <span class="chip chip-tarde">☾ Tarde</span>
+          <span class="chip">⏱ 4 horas</span>
+          <span class="chip">👥 2 inscritos</span>
+          <span class="chip chip-ok">✓ Inscrito</span>
+          <span class="chip chip-dark">Profesor</span>
+        </div>
+        <p class="eyebrow">Alertas</p>
+        <div class="alert alert-ok">¡Listo! Quedaste inscrito en Impresión 3D.</div>
+        <div class="alert alert-error">Solo un alumno puede inscribirse a talleres.</div>
+        <div class="alert alert-warn">Ya estás inscrito en este taller.</div>
+      </div>
+
+      <div class="panel panel-dark panel-cut stack">
+        <span class="title-plate">Iniciar sesión</span>
+        <p style="margin:0;opacity:.8">Panel oscuro para login o acciones de profesor.</p>
+        <div class="field">
+          <label for="u">Usuario</label>
+          <input id="u" class="input" placeholder="ana.lopez">
+        </div>
+        <div class="field has-error">
+          <label for="p">Contraseña</label>
+          <input id="p" class="input" type="password" value="xxxx">
+          <span class="hint">Usuario o contraseña incorrectos.</span>
+        </div>
+        <button class="btn btn-primary btn-block">Entrar</button>
+      </div>
+    </div>
+
+    <hr class="divider-glow">
+
+    <!-- Tarjetas con datos reales -->
+    <h2>Tarjetas de taller <span class="muted" style="font-size:.9rem;font-style:normal;text-transform:none">· datos en vivo desde /api/talleres</span></h2>
+    <div id="talleres" class="grid-talleres"><p class="muted">Cargando…</p></div>
+  </main>
+
+  <script>
+    const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    fetch('/api/talleres')
+      .then(r => r.json())
+      .then(list => {
+        document.getElementById('talleres').innerHTML = list.map(t => `
+          <article class="taller-card">
+            <div class="cover">
+              <img src="/img/talleres/${t.id}.jpg" alt="Flyer del taller ${esc(t.name)}" loading="lazy">
+              <span class="chip ${t.horario === 1 ? 'chip-manana' : 'chip-tarde'}">${t.horario === 1 ? '☀' : '☾'} ${esc(t.horarioNombre)}</span>
+            </div>
+            <div class="body">
+              <h3>${esc(t.name)}</h3>
+              <div class="meta">
+                <span class="chip">⏱ ${t.horas} horas</span>
+                <span class="chip">👥 ${t.inscritos} inscritos</span>
+              </div>
+              <p class="desc">${esc(t.description)}</p>
+              <div class="footer">
+                <div class="instructor"><small>Imparte</small>${esc(t.instructor)}</div>
+                <button class="btn btn-primary btn-sm">Inscribirme</button>
+              </div>
+            </div>
+          </article>`).join('');
+      })
+      .catch(() => document.getElementById('talleres').innerHTML = '<div class="alert alert-error">No se pudo conectar con la API.</div>');
+  </script>
+</body>
+</html>
